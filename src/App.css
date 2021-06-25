@@ -1,12 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap");
+
 .heading {
   color: white;
-  font-size: 4rem;
+  font-family: "Noto Serif", serif;
+  font-size: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3rem;
-}
-
-.details-heading {
-  display: inline-block;
+  padding-top: 4rem;
 }

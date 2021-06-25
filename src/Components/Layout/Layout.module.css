@@ -17,6 +17,9 @@
 .dark {
   background-image: url("../../images/dark.jpg");
 }
+.default {
+  background-image: url("../../images/default.jpg");
+}
 .mist {
   background-image: url("../../images/mist.jpg");
 }

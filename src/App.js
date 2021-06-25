@@ -6,8 +6,8 @@ import Detail from "./Components/Details/Detail";
 function App() {
   return (
     <>
-      <Layout weather="">
-        <h1 className="heading">Weather App</h1>
+      <Layout weather="dark">
+        <h1 className="heading">TempFactor</h1>
         <main>
           <Input />
           <Detail />

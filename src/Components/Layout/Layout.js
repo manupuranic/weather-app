@@ -21,8 +21,11 @@ const Layout = (props) => {
     case "thunderstorm":
       theme = classes.thunderstorm;
       break;
+    case "dark":
+      theme = classes.dark;
+      break;
     default:
-      theme = classes.clearSky;
+      theme = classes.default;
       break;
   }
   const customClass = `${classes.background} ${theme}`;
