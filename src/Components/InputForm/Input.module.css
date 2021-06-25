@@ -20,11 +20,11 @@
   display: inline-block;
   max-width: 100%;
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.9rem;
   margin-bottom: 1rem;
-  border: 0.15rem solid blueviolet;
+  border: 0.2rem solid #5c38df;
   border-radius: 0.8rem;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 .inputForm input:focus {
@@ -35,7 +35,7 @@
   background-color: transparent;
   border: none;
   border: 1px solid black;
-  background-color: blueviolet;
+  background-color: #724cf9;
   color: white;
   border-radius: 1rem;
   padding: 1rem;
@@ -44,7 +44,7 @@
 }
 
 .inputForm button:hover {
-  background-color: rgb(159, 78, 235);
+  background-color: #5c38df;
   border: 1px solid black;
   box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.466);
   transform: translateY(-0.2rem);
