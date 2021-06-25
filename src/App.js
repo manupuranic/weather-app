@@ -6,7 +6,7 @@ import Detail from "./Components/Details/Detail";
 function App() {
   return (
     <>
-      <Layout>
+      <Layout weather="">
         <h1 className="heading">Weather App</h1>
         <main>
           <Input />

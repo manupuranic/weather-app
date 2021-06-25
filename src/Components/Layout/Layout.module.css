@@ -1,6 +1,6 @@
 .background {
   background: fixed;
-  background-image: url("../../images/default.jpg");
+  /* background-image: url("../../images/mist.jpg"); */
   background-position: center;
   background-size: cover;
 
@@ -9,6 +9,31 @@
   animation: fade-in ease-out 1s;
   animation-fill-mode: backwards;
   padding-bottom: 5rem;
+}
+
+.clearSky {
+  background-image: url("../../images/clear-sky.jpg");
+}
+.dark {
+  background-image: url("../../images/dark.jpg");
+}
+.mist {
+  background-image: url("../../images/mist.jpg");
+}
+.rain {
+  background-image: url("../../images/rain.jpg");
+}
+.scatteredClouds {
+  background-image: url("../../images/scattered-clouds.jpg");
+}
+.shower {
+  background-image: url("../../images/shower.jpg");
+}
+.snow {
+  background-image: url("../../images/snow.jpg");
+}
+.thunderstorm {
+  background-image: url("../../images/thunderstorm.jpg");
 }
 
 @keyframes fade-in {

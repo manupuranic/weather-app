@@ -43,31 +43,31 @@ const Detail = (props) => {
       </div>
       <div className={classes["grid-container"]}>
         <div className={classes["grid-item"]}>
-          <h5>Pressure</h5>
-          <p>{dummy.pressure}</p>
+          <p className={classes.itemName}>Pressure</p>
+          <h4 className={classes.itemValue}>{dummy.pressure}</h4>
         </div>
         <div className={classes["grid-item"]}>
-          <h5>Humidity</h5>
-          <p>{dummy.humidity}</p>
+          <p className={classes.itemName}>Humidity</p>
+          <h4 className={classes.itemValue}>{dummy.humidity}</h4>
         </div>
         <div className={classes["grid-item"]}>
-          <h5>Wind speed</h5>
-          <p>{dummy.windSpeed}</p>
+          <p className={classes.itemName}>Wind speed</p>
+          <h4 className={classes.itemValue}>{dummy.windSpeed}</h4>
         </div>
         <div className={classes["grid-item"]}>
-          <h5>Wind direction</h5>
-          <p>
+          <p className={classes.itemName}>Wind direction</p>
+          <h4 className={classes.itemValue}>
             {dummy.windDir}
             <sup>°</sup>
-          </p>
+          </h4>
         </div>
         <div className={classes["grid-item"]}>
-          <h5>Sunrise</h5>
-          <p>{dummy.sunrise}</p>
+          <p className={classes.itemName}>Sunrise</p>
+          <h4 className={classes.itemValue}>{dummy.sunrise}</h4>
         </div>
         <div className={classes["grid-item"]}>
-          <h5>Sunset</h5>
-          <p>{dummy.sunset}</p>
+          <p className={classes.itemName}>Sunset</p>
+          <h4 className={classes.itemValue}>{dummy.sunset}</h4>
         </div>
       </div>
     </Card>
