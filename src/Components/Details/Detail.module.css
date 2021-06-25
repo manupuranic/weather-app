@@ -1,0 +1,39 @@
+.detailCover {
+  margin: auto;
+  margin-top: 1rem;
+  max-width: 50%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.main {
+  padding-bottom: 2rem;
+}
+
+.main h3 {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  line-height: 3rem;
+}
+
+.main p {
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.main hr {
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  border-bottom: none;
+  background-color: #eee;
+  padding: 0.01rem;
+  /* border: 0.5rem; */
+}
+
+@media screen and (max-width: 700px) {
+  .detailCover {
+    max-width: 90%;
+  }
+}
