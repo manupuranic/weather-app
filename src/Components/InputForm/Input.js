@@ -7,7 +7,7 @@ const Input = (props) => {
   };
 
   return (
-    <Card>
+    <Card className={classes.cover}>
       <form className={classes.inputForm} onSubmit={submitHandler}>
         <input type="text" placeholder="Enter the city..." />
         <button type="submit">Search</button>

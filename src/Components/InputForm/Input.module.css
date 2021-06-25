@@ -1,5 +1,19 @@
+.cover {
+  margin: auto;
+  margin-top: 10rem;
+  max-width: 50%;
+  width: 100%;
+  position: relative;
+}
+
 .inputForm {
   padding: 2rem;
+}
+
+.inputForm::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .inputForm input {
@@ -10,7 +24,7 @@
   margin-bottom: 1rem;
   border: 0.15rem solid blueviolet;
   border-radius: 0.8rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .inputForm input:focus {
@@ -39,4 +53,18 @@
 .inputForm button:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.342);
+}
+
+@media screen and (max-width: 700px) {
+  .cover {
+    max-width: 90%;
+  }
+
+  .inputForm button:hover {
+    transform: translateY(0);
+  }
+
+  .inputForm button:active {
+    transform: translateY(0);
+  }
 }
