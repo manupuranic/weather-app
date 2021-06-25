@@ -1,0 +1,42 @@
+.inputForm {
+  padding: 2rem;
+}
+
+.inputForm input {
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 0.15rem solid blueviolet;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.inputForm input:focus {
+  outline: none;
+}
+
+.inputForm button {
+  background-color: transparent;
+  border: none;
+  border: 1px solid black;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2rem 6rem #00000034;
+  float: right;
+}
+
+.inputForm button:hover {
+  background-color: rgb(159, 78, 235);
+  border: 1px solid black;
+  box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.466);
+  transform: translateY(-0.2rem);
+}
+
+.inputForm button:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.342);
+}
