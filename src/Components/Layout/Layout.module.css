@@ -1,7 +1,7 @@
 .background {
   background: fixed;
   /* background-image: url("../../images/mist.jpg"); */
-  background-position: center;
+  background-position: top;
   background-size: cover;
 
   width: 100%;
