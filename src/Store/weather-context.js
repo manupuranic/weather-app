@@ -31,14 +31,9 @@ export const WeatherProvider = (props) => {
           city +
           "&units=metric&appid=4f8b0722c0db57af08847594868b32fc"
       );
+
       if (!response.ok) {
         throw new Error("Something went wrong!");
-      }
-
-      if (response.status === "404") {
-        setIsLoading(false);
-        setError("City not found!");
-        return;
       }
 
       const data = await response.json();
@@ -54,14 +49,15 @@ export const WeatherProvider = (props) => {
         sunrise: data.sys.sunrise,
         sunset: data.sys.sunset,
         name: data.name,
+        country: data.sys.country,
       };
 
       setTheme(data.weather[0].main);
       setWeatherData(updatedWeather);
-      setIsLoading(false);
     } catch (error) {
       setError(error.message);
     }
+    setIsLoading(false);
   };
 
   const weatherContext = {

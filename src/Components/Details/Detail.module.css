@@ -75,6 +75,12 @@
   font-size: 2rem;
 }
 
+.error {
+  font-size: 2rem;
+  color: #fff;
+  padding: 2rem;
+}
+
 @media screen and (max-width: 800px) {
   .detailCover {
     max-width: 90%;

@@ -16,6 +16,29 @@ function msToTime(duration) {
   return hours - 12 + ":" + minutes + ":" + seconds;
 }
 
+function degToCompass(num) {
+  var val = Math.floor(num / 22.5 + 0.5);
+  var arr = [
+    "North",
+    "North to NorthEast",
+    "NorthEast",
+    "East to NorthEast",
+    "East",
+    "East to SouthEast",
+    "SouthEast",
+    "South to SouthEast",
+    "South",
+    "South to SouthWest",
+    "SouthWest",
+    "West to SouthWest",
+    "West",
+    "West to NorhtWest",
+    "NorthWest",
+    "North to NorthWest",
+  ];
+  return arr[val % 16];
+}
+
 // const dummy = {
 //   main: "Clouds",
 //   description: "Overcast Clouds",
@@ -37,6 +60,7 @@ const Detail = (props) => {
     "@2x.png";
   const sunrise = msToTime(weatherCtx.weatherData.sunrise);
   const sunset = msToTime(weatherCtx.weatherData.sunset);
+  const windDeg = degToCompass(weatherCtx.weatherData.windDir);
 
   const weatherDetails = (
     <div>
@@ -47,7 +71,9 @@ const Detail = (props) => {
         </h1>
         <img src={icon} alt={weatherCtx.theme} />
         <h4>{weatherCtx.weatherData.description}</h4>
-        <p>{weatherCtx.weatherData.name}</p>
+        <p>
+          {weatherCtx.weatherData.name}, {weatherCtx.weatherData.country}
+        </p>
         <hr />
       </div>
       <div className={classes["grid-container"]}>
@@ -71,10 +97,7 @@ const Detail = (props) => {
         </div>
         <div className={classes["grid-item"]}>
           <p className={classes.itemName}>Wind direction</p>
-          <h4 className={classes.itemValue}>
-            {weatherCtx.weatherData.windDir}
-            <sup>°</sup>
-          </h4>
+          <h4 className={classes.itemValue}>{windDeg}</h4>
         </div>
         <div className={classes["grid-item"]}>
           <p className={classes.itemName}>Sunrise</p>
@@ -93,7 +116,11 @@ const Detail = (props) => {
   let content = <p>Weather details not found!</p>;
 
   if (weatherCtx.error) {
-    content = <p>Something went wrong! Please try again later</p>;
+    content = (
+      <p className={classes.error}>
+        City not Found! Please check the spelling/pincode and try again.
+      </p>
+    );
   }
 
   if (weatherCtx.isLoading) {
