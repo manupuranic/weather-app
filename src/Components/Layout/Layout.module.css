@@ -1,7 +1,8 @@
 .background {
+  position: absolute;
   background: fixed;
   /* background-image: url("../../images/mist.jpg"); */
-  /* background-position: top; */
+  background-position: top;
   background-size: cover;
 
   width: 100%;
