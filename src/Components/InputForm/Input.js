@@ -32,7 +32,7 @@ const Input = (props) => {
         <input
           onChange={cityInputHandler}
           type="text"
-          placeholder="Enter the city..."
+          placeholder="Enter the city or pincode..."
           value={enteredCity}
         />
         {weatherCtx.isSearched && (
