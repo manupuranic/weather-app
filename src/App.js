@@ -1,16 +1,25 @@
-import "./App.css";
+import classes from "./App.module.css";
 import Layout from "./Components/Layout/Layout";
 import Input from "./Components/InputForm/Input";
 import Detail from "./Components/Details/Detail";
+import WeatherContext from "./Store/weather-context";
+import { useContext } from "react";
 
 function App() {
+  const weatherCtx = useContext(WeatherContext);
+  let customClass;
+  if (weatherCtx.isSearched) {
+    customClass = classes.heading;
+  } else {
+    customClass = classes.defaultHeading;
+  }
   return (
     <>
-      <Layout weather="dark">
-        <h1 className="heading">TempFactor</h1>
+      <Layout weather={weatherCtx.theme}>
+        <h1 className={customClass}>TempFactor</h1>
         <main>
           <Input />
-          <Detail />
+          {weatherCtx.isSearched && <Detail />}
         </main>
       </Layout>
     </>

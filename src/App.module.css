@@ -9,3 +9,13 @@
   align-items: center;
   padding-top: 4rem;
 }
+
+.defaultHeading {
+  color: white;
+  font-family: "Noto Serif", serif;
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rem;
+}

@@ -42,6 +42,7 @@
   box-shadow: 0 2rem 6rem #00000034;
   float: right;
   font-size: 1.6rem;
+  margin-right: 1rem;
 }
 
 .inputForm button:hover {
@@ -56,6 +57,11 @@
   box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.342);
 }
 
+.reset {
+  background-color: transparent;
+  border: 1px solid #724cf9;
+}
+
 @media screen and (max-width: 800px) {
   .cover {
     max-width: 90%;
@@ -63,9 +69,10 @@
 
   .inputForm button:hover {
     transform: translateY(0);
+    background-color: #724cf9;
   }
 
   .inputForm button:active {
-    transform: translateY(0);
+    transform: translateY(0.1rem);
   }
 }

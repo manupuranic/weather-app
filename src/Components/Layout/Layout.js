@@ -3,22 +3,28 @@ import classes from "./Layout.module.css";
 const Layout = (props) => {
   let theme;
   switch (props.weather) {
-    case "clear":
+    case "Clear":
       theme = classes.clearSky;
       break;
-    case "mist":
+    case "Mist":
       theme = classes.mist;
       break;
-    case "rain":
+    case "Haze":
+      theme = classes.mist;
+      break;
+    case "Rain":
       theme = classes.rain;
       break;
-    case "scattered":
-      theme = classes.scatteredClouds;
+    case "Drizzle":
+      theme = classes.shower;
       break;
-    case "snow":
+    case "Clouds":
+      theme = classes.clearSky;
+      break;
+    case "Snow":
       theme = classes.snow;
       break;
-    case "thunderstorm":
+    case "Thunderstorm":
       theme = classes.thunderstorm;
       break;
     case "dark":
