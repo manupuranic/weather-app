@@ -17,13 +17,17 @@ export const WeatherProvider = (props) => {
   const [weatherData, setWeatherData] = useState({});
   const [theme, setTheme] = useState("default");
 
+  const detailsToggle = () => {
+    setIsSearched(false);
+  };
+
   const getWeather = async (city) => {
     setIsSearched(true);
     setIsLoading(true);
     setError(null);
     try {
       const response = await fetch(
-        "http://api.openweathermap.org/data/2.5/weather?q=" +
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
           city +
           "&units=metric&appid=4f8b0722c0db57af08847594868b32fc"
       );
@@ -67,6 +71,7 @@ export const WeatherProvider = (props) => {
     error: error,
     theme: theme,
     getWeather: getWeather,
+    toggleSearch: detailsToggle,
   };
 
   return (
