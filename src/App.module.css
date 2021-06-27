@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 4rem;
+  animation: slide-up ease-in-out 1s;
 }
 
 .defaultHeading {
@@ -18,4 +19,28 @@
   justify-content: center;
   align-items: center;
   padding-top: 15rem;
+  /* animation: slide-up ease-in-out 1s; */
+}
+
+@keyframes slide-up {
+  from {
+    font-size: 6rem;
+    padding-top: 15rem;
+  }
+  to {
+    font-size: 5rem;
+    padding-top: 4rem;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    font-size: 5rem;
+    padding-top: 4rem;
+  }
+
+  to {
+    font-size: 6rem;
+    padding-top: 15rem;
+  }
 }
